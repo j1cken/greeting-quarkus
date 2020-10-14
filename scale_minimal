@@ -1,0 +1,1 @@
+oc scale deployment minimal-quarkus-native --replicas=50

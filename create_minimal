@@ -1,0 +1,9 @@
+oc new-build --name=minimal-quarkus-native \
+    --docker-image=registry.access.redhat.com/ubi8-minimal \
+    --source-image=quarkus-native \
+    --source-image-path='/home/quarkus/application:.' \
+    --dockerfile=$'FROM registry.access.redhat.com/ubi8-minimal:latest\nCOPY application /application\nCMD /application -Xms12m -Xmx36m -Xmn36\nEXPOSE 8080' --allow-missing-images
+read -p "Wait for build to finish ..."
+oc new-app minimal-quarkus-native
+oc label deployment minimal-quarkus-native app.openshift.io/runtime=quarkus --overwrite
+oc expose svc minimal-quarkus-native

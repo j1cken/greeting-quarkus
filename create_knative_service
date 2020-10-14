@@ -1,0 +1,2 @@
+PRJ=$(oc project |cut -d '"' -f 2)
+kn service create qknative --autoscale-window 6s --image image-registry.openshift-image-registry.svc:5000/${PRJ}/minimal-quarkus-native
