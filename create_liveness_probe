@@ -1,0 +1,1 @@
+oc set probe deployment minimal-quarkus-native --liveness --open-tcp=8080
