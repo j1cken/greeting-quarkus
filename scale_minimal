@@ -1,1 +1,1 @@
-oc scale deployment minimal-quarkus-native --replicas=50
+oc scale deployment minimal-quarkus-native --replicas=20
