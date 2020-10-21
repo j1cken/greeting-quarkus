@@ -1,4 +1,4 @@
-oc delete pod load1
-oc run load1 --image=httpd --restart Never --command ab -- -c 10 -n 100000 minimal-quarkus-native:8080/hello
-sleep 5
-oc logs -f load1
+#oc delete pod load1
+oc run load1 --image=httpd --label="app=load"--restart Always --command ab -- -c 10 -n 100000 minimal-quarkus-native:8080/hello
+#sleep 5
+#oc logs -f load1
