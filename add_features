@@ -1,0 +1,1 @@
+./mvnw quarkus:add-extensions -Dextensions=quarkus-smallrye-health,quarkus-smallrye-metrics,quarkus-smallrye-openapi
