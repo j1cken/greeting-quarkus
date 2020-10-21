@@ -1,0 +1,1 @@
+oc autoscale deployment minimal-quarkus-native --min=1 --max=20 --cpu-percent=30
