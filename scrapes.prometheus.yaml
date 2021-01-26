@@ -1,0 +1,5 @@
+spec:
+  additionalScrapeConfigs:
+    key: scrape.config
+    name: additional-scrape-configs
+    optional: true
