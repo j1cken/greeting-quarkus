@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: quarkus-helm
+  name: quarkus-helm-prod
 spec:
   replicas: 2
   template:

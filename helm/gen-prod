@@ -1,0 +1,1 @@
+helm template quarkus-helm-prod redhat-charts/quarkus -f values.yaml >helm-prod.yaml
