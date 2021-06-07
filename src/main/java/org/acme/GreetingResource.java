@@ -6,6 +6,7 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import org.eclipse.microprofile.config.inject.ConfigProperty;
 import org.eclipse.microprofile.metrics.annotation.Counted;
 import org.eclipse.microprofile.openapi.annotations.Operation;
 import org.eclipse.microprofile.openapi.annotations.parameters.Parameter;
@@ -13,11 +14,14 @@ import org.eclipse.microprofile.openapi.annotations.parameters.Parameter;
 @Path("/hello")
 public class GreetingResource {
 
+    @ConfigProperty(defaultValue = "world")
+    String name;
+
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     @Operation(summary = "Say hello", description = "Welcome everybody here in the room!")
     public String hello() {
-        return "Hello there!";
+        return "Hello " + name;
     }
 
     @GET
