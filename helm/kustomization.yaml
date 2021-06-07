@@ -1,0 +1,5 @@
+bases:
+  - helm-prod.yaml
+patches:
+  - prod.yaml
+  

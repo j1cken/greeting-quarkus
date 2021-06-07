@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: quarkus-helm
+spec:
+  replicas: 2
+  template:
+    spec:
+      containers:
+        - name: web
+          env:
+            - name: ORG_ACME_GREETINGRESOURCE_NAME
+              value: Prod
