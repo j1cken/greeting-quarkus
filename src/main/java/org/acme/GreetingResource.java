@@ -21,7 +21,7 @@ public class GreetingResource {
     @Produces(MediaType.TEXT_PLAIN)
     @Operation(summary = "Say hello", description = "Welcome everybody here in the room!")
     public String hello() {
-        return "Hola " + name;
+        return "Hello " + name;
     }
 
     @GET
