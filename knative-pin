@@ -1,0 +1,2 @@
+oc tag greeting/greeting-quarkus-git:latest greeting/greeting-quarkus-git:english
+kn service update greeting-quarkus-git --image image-registry.openshift-image-registry.svc:5000/greeting/greeting-quarkus-git:english --traffic @latest=100
