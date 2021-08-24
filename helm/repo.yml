@@ -1,0 +1,10 @@
+apiVersion: helm.openshift.io/v1beta1
+kind: HelmChartRepository
+metadata:
+  name: j1cken
+spec:
+ # optional name that might be used by console
+ # name: <chart-display-name>
+  connectionConfig:
+    url: https://j1cken.github.io/helm-charts/
+    
